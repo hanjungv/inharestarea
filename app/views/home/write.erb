@@ -22,50 +22,39 @@
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header" text align="center" style = "font-size:55px;">인하대의 숨겨진<br>편리한 시설</h1>
+                <h1 class="page-header" text align="center" style = "font-size:48px;">인하의<br>편리한 시설</h1>
                 <a href="/home/index" class="btn btn-block btn-lg btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
-                <h1 class="page-header" style ="margin-bottom:35px; font-size:40px;">결과 페이지 입니다.옆에 알려줄것입니다.
-                    <small>
-                      if문으로 출력을 다르게 할것입니다.
+                <h1 class="page-header" style ="margin-bottom:35px; font-size:40px;" text align="center">
+                    <%= @rooms[@po_id.to_i-1]%>에 있는 시설입니다.<br>
+                    <small style = "margin-top:-10px;">
+                      이용에 필요한 정보를 적었습니다.<br><br>
                     </small>
                 </h1>
             </div>
         </div>
-        <!-- /.row -->
-
 
         <% @rest.each do |p| %>
-          <% if p.itstype == 3 %>
+          <% if p.building == @po_id.to_i %>
             <div class="row">
                 <div class="col-md-7">
-                    <a href="#">
-                        <img class="img-responsive" src="/assets/700x300ipsum.jpg" alt="">
-                    </a>
+                    <img class="img-responsive" src="/assets/700x300ipsum.jpg" alt="">
                 </div>
                 <div class="col-md-5">
                     <h1><a class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-tag"></span> </a> <%=p.name%></h1>
                     <hr>
-                    <h3 style="margin-bottom:20px;"><%=p.building%> <%=p.address%></h4>
+                    <h3 style="margin-bottom:20px;"><%=@rooms[@po_id.to_i-1]%> <%=p.address%></h4>
                     <p style="font-size:20px"><%=p.itsexplain%></p>
                     <br>
-                    <p style="font-size:30px;"><a class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-euro"></span> </a> <%=p.costs%>원</p>
+                    <p style="font-size:30px;"><a class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-euro"></span> </a> <%=p.costs%></p>
                 </div>
             </div>
             <hr>
           <%end%>
         <%end%>
-        <!-- /.row -->
-
-
-
-
-
-
-
+        <a href="/home/index" class="btn btn-block btn-lg btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
 
 
         <hr>
-        <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
@@ -73,7 +62,6 @@
             			<p class="footer-company-name">Inha computer Science | CTP | Likelion 4th</p>
                 </div>
             </div>
-            <!-- /.row -->
         </footer>
 
     </div>

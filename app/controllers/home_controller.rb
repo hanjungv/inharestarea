@@ -8,6 +8,8 @@ class HomeController < ApplicationController
   def write
     @rest = Totalrest.all
     @po_id = params[:post_id]
+    @rooms = ["1호관", "2호관", "4호관" , "5호관", "6호관", "7호관" , "C호관", "9호관", "60주년기념관",
+    "하이테크센터", "체육관", "평생교육원", "학군단", "정석학술정보관", "대운동장", "농구장", "벤처창업관", "창업보육센터"]
   end
 
 

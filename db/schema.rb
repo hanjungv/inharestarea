@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(version: 20160714040417) do
 
   create_table "totalrests", force: :cascade do |t|
     t.string   "name"
-    t.string   "building"
+    t.integer  "building"
     t.string   "address"
     t.integer  "itstype"
     t.text     "itsexplain"
-    t.integer  "costs"
+    t.string   "costs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
