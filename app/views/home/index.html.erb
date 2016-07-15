@@ -34,25 +34,25 @@
 
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/assets/bed1.png" alt=""><br>
+                    <img class="img-responsive" src='<%= image_path("bed1.png")%>' alt=""><br>
                     <p text align="center" style = "font-size:26px;">남휴ㆍ여휴</p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/assets/printer.png" alt=""><br>
+                    <img class="img-responsive" src="<%= image_path("printer.png")%>" alt=""><br>
                     <p text align="center" style = "font-size:26px;">인쇄소</p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/assets/dish.png" alt=""><br>
+                    <img class="img-responsive" src="<%= image_path("dish.png")%>" alt=""><br>
                     <p text align="center" style = "font-size:26px;">식당</p>
                 </a>
             </div>
             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="/assets/shower.png" alt=""><br>
+                    <img class="img-responsive" src="<%= image_path("shower.png")%>" alt=""><br>
                     <p text align="center" style = "font-size:26px;">체육관/샤워실</p>
                 </a>
             </div>
@@ -153,6 +153,7 @@
             <hr>
             <div class="google-maps" test align ="center">
               <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDuha3EGz9gAU_HPKUbqUDCeXLMU_wkXNQ'></script><div style='overflow:hidden;height:300px;width:300px;'><div id='gmap_canvas' style='height:300px;width:400px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://addmap.net/'>google maps iframe embed</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=5cd4442957d7489cd265a1163bdbd66011c1bf4f'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(37.45027762311752,126.65361674603264),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.45027762311752,126.65361674603264)});infowindow = new google.maps.InfoWindow({content:'<strong>인하대학교</strong><br>남구 인하로 100<br> Incheon<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
               <p>22212 인천광역시 남구 인하로 100, 대표전화 : 032-860-7114</p>
             </div>
         </div>
@@ -167,9 +168,9 @@
     				<p class="footer-company-name">Hanjung &copy; 2016.07</p>
       			<p class="footer-company-name">Inha computer Science | CTP | Likelion 4th</p>
     				<div class="footer-icons">
-    					<a href="https://www.facebook.com/profile.php?id=100005573837145&ref=bookmarks"><img class="img-responsive img-center" src="/assets/facebook.png" alt="Responsive image" width="50" height="50"></a>
-              <a href="https://www.instagram.com/hann0ng/"><img class="img-responsive img-center" src="/assets/Instagram-logo.png" alt="Responsive image" width="50" height="50"></a>
-              <a href="https://github.com/hanjungv"><img class="img-responsive img-center" src="/assets/git-logo.png" alt="Responsive image" width="50" height="50"></a>
+    					<a href="https://www.facebook.com/profile.php?id=100005573837145&ref=bookmarks"><img class="img-responsive img-center" src="<%= image_path("facebook.png")%>" alt="Responsive image" width="50" height="50"></a>
+              <a href="https://www.instagram.com/hann0ng/"><img class="img-responsive img-center" src="<%= image_path("Instagram-logo.png")%>" alt="Responsive image" width="50" height="50"></a>
+              <a href="https://github.com/hanjungv"><img class="img-responsive img-center" src="<%= image_path("git-logo.png") %>" alt="Responsive image" width="50" height="50"></a>
     				</div>
 
     			</div>
