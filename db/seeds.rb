@@ -6,13 +6,13 @@
 # 1.식당 2.남휴 / 여휴 3.휴게실(앉아있기 좋은곳) 4.스터디룸 5.인쇄실 6.샤워실 / 체육관
 
 #1호관 종류별로
-Totalrest.create(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
+Totalrest.create!(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
                      itstype:1, itsexplain:"국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외...",costs:"하나에 100원")
-Totalrest.create(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
+Totalrest.create!(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
                       itstype:2, itsexplain:"다. 공짜다국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외....",costs:"하나에 100원")
-Totalrest.create(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
+Totalrest.create!(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
                        itstype:3, itsexplain:"다. 국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외...공짜다.",costs:"하나에 100원")
-Totalrest.create(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
+Totalrest.create!(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
                         itstype:4, itsexplain:"다. 공국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외...짜다.",costs:"하나에 100원")
 Totalrest.create(name: "1호관 무엇인가", building: 1, address:"2층 어딘가",
                          itstype:5, itsexplain:"다. 공국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외...짜다.",costs:"하나에 100원")
