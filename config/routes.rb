@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/home/newval'
   get '/write/:post_id' =>'home#write'
 
+  get '/typewrite/:post_id' => 'home#typewrite'
+
   post '/addval' => "home#addval"
   post '/emailsend'=>"home#emailsend"
   # The priority is based upon order of creation: first created -> highest priority.

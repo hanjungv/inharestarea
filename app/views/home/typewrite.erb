@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>결과 출력 페이지</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/hanna.css">
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Page Content -->
+    <div class="container" style = "margin-top:10px; font-family:'Hanna',serif;">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header" text align="center" style = "font-size:48px;">인하의<br>편리한 시설</h1>
+                <a href="/home/index" class="btn btn-block btn-lg btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
+                <h1 class="page-header" style ="margin-bottom:35px; font-size:40px;" text align="center">
+                    <%= @types[@po_id.to_i]%> 시설입니다.<br>
+                    <small style = "margin-top:-10px;">
+                      이용에 필요한 정보를 적었습니다.<br><br>
+                    </small>
+                </h1>
+            </div>
+        </div>
+
+        <% @rest.each do |p| %>
+          <% if p.itstype == @po_id.to_i %>
+            <div class="row">
+                <div class="col-md-7">
+                    <img class="img-responsive" src="<%=image_path("700x300ipsum.jpg")%>" alt="">
+                </div>
+                <div class="col-md-5">
+                    <h1><a class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-tag"></span> </a> <%=p.name%></h1>
+                    <hr>
+                    <h3 style="margin-bottom:20px;"><%=@rooms[p.building-1]%> <%=p.address%></h4>
+                    <p style="font-size:20px"><%=p.itsexplain%></p>
+                    <br>
+                    <p style="font-size:30px;"><a class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-euro"></span> </a> <%=p.costs%></p>
+                </div>
+            </div>
+            <hr>
+          <%end%>
+        <%end%>
+        <a href="/home/index" class="btn btn-block btn-lg btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
+
+
+        <hr>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                  <p class="footer-company-name">Hanjung &copy; 2016.07</p>
+            			<p class="footer-company-name">Inha computer Science | CTP | Likelion 4th</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
