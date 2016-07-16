@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20160714040417) do
     t.integer  "itstype"
     t.text     "itsexplain"
     t.string   "costs"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "image_url",  default: ""
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

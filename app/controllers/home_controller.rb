@@ -34,6 +34,11 @@ class HomeController < ApplicationController
     total.itstype=params[:servtype] #그 휴게 시설의 속성
     total.itsexplain=params[:servexplain] # 어떻게 사용할수 있는지 등 조건을 넣어줌
     total.costs=params[:servcost] #비용이 얼마나 드는가?
+
+    uploader = MachineUploader.new
+    uploader.store!(params[:pic])
+    total.image_url = uploader.url
+
     total.save
 
     redirect_to "/home/index"

@@ -9,6 +9,8 @@ class CreateTotalrests < ActiveRecord::Migration
       t.text :itsexplain # 어떻게 사용할수 있는지 등 조건을 넣어줌
       t.string :costs #비용이 얼마나 드는가?
 
+      t.string :image_url, default:"" #이미지 url
+
       t.timestamps null: false
     end
   end
