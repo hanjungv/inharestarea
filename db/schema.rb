@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160714040417) do
     t.text     "itsexplain"
     t.string   "costs"
     t.string   "image_url",  default: ""
+    t.string   "whois"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end

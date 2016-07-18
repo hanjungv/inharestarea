@@ -3,10 +3,15 @@ Rails.application.routes.draw do
 
   get 'home/index'
   get '/home/newval'
+  get '/home/editdata'
+
+  get '/destroy/:id' =>"home#destroy"
+  get 'update_view/:post_id' =>'home#update_view'
+  post 'real_update/:post_id' =>'home#real_update'
+  
   get '/write/:post_id' =>'home#write'
 
   get '/typewrite/:post_id' => 'home#typewrite'
-
   post '/addval' => "home#addval"
   post '/emailsend'=>"home#emailsend"
   # The priority is based upon order of creation: first created -> highest priority.
