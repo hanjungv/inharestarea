@@ -33,29 +33,30 @@
                 </h1>
             </div>
         </div>
-        <a href="#" class="scrollToTop btn-sm btn-default"><span class="glyphicon glyphicon-chevron-up"></span> </a>
-        <% @rest.each do |p| %>
-          <% if p.building == @po_id.to_i %>
-            <div class="row">
-                <div class="col-md-7">
-                    <img class="img-responsive" src="<%=p.image_url%>" alt="">
-                </div>
-                <div class="col-md-5">
-                    <h1 style="font-size:20px"><a class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-tag"></span> </a> <%=p.name%></h1>
-                    <hr>
-                    <h3 style="margin-bottom:20px; font-size:18px"><%=@rooms[@po_id.to_i-1]%> <%=p.address%></h4>
-                    <p style="font-size:18px"><%=p.itsexplain%></p>
-                    <br>
-                    <p style="font-size:18px;"><a class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-euro"></span> </a> <%=p.costs%></p>
-                    <p style="font-size:15px;">제보해주신분: <%=p.whois%></p>
-                </div>
-            </div>
-            <hr>
+        <div>
+          <a href="#" class="scrollToTop btn-sm btn-default"><span class="glyphicon glyphicon-chevron-up"></span> </a>
+          <% @rest.each do |p| %>
+            <% if p.building == @po_id.to_i %>
+              <div class="row">
+                  <div class="col-md-7">
+                      <img class="img-responsive" src="<%=p.image_url%>" alt="">
+                  </div>
+                  <div class="col-md-5">
+                      <h1 style="font-size:20px"><a class="btn btn-xs btn-primary"><span class="glyphicon glyphicon-tag"></span> </a> <%=p.name%></h1>
+                      <hr>
+                      <h3 style="margin-bottom:20px; font-size:18px"><%=@rooms[@po_id.to_i-1]%> <%=p.address%></h4>
+                      <p style="font-size:18px"><%=p.itsexplain%></p>
+                      <br>
+                      <p style="font-size:18px;"><a class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-euro"></span> </a> <%=p.costs%></p>
+                      <p style="font-size:15px;">제보해주신분: <%=p.whois%></p>
+                  </div>
+              </div>
+              <hr>
+            <%end%>
           <%end%>
-        <%end%>
 
-        <a href="/home/index" class="btn btn-block btn-primary btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
-
+          <a href="/home/index" class="btn btn-block btn-primary btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
+        </div>
 
         <hr>
         <footer>
