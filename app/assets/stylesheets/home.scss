@@ -153,3 +153,21 @@
 		float: none;
 	}
 }
+
+
+
+
+//scroll
+.scrollToTop{
+	text-align:center;
+	background: whiteSmoke;
+	color: #444;
+	text-decoration: none;
+	position:fixed;
+	top:550px;
+	right:60px;
+	display:none;
+}
+.scrollToTop:hover{
+	text-decoration:none;
+}

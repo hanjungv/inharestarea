@@ -20,6 +20,7 @@
     <!-- Page Content -->
     <div class="container" style = "margin-top:10px; font-family:'Hanna',serif;">
         <!-- Page Heading -->
+
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header" text align="center" style = "font-size:40px;">인하의<br>편리한 시설</h1>
@@ -32,7 +33,7 @@
                 </h1>
             </div>
         </div>
-
+        <a href="#" class="scrollToTop btn-sm btn-default"><span class="glyphicon glyphicon-chevron-up"></span> </a>
         <% @rest.each do |p| %>
           <% if p.building == @po_id.to_i %>
             <div class="row">
@@ -52,6 +53,7 @@
             <hr>
           <%end%>
         <%end%>
+
         <a href="/home/index" class="btn btn-block btn-primary btn-info"><span class="glyphicon glyphicon-chevron-left"></span> 메인화면으로</a><hr>
 
 
@@ -71,6 +73,22 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script>
+    $(document).ready(function(){
+    	//Check to see if the window is top if not then display button
+    	$(window).scroll(function(){
+    		if ($(this).scrollTop() > 100) {
+    			$('.scrollToTop').fadeIn();
+    		} else {
+    			$('.scrollToTop').fadeOut();
+    		}
+    	});
+    	//Click event to scroll to top
+    	$('.scrollToTop').click(function(){
+    		$('html, body').animate({scrollTop : 0},800);
+    		    return false;
+    	     });
+      });
+    </script>
 </body>
 </html>
