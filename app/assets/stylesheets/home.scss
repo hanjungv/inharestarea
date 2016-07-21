@@ -159,15 +159,18 @@
 
 //scroll
 .scrollToTop{
-	text-align:center;
-	background: whiteSmoke;
-	color: #444;
-	text-decoration: none;
-	position:fixed;
-	top:75px;
-	right:40px;
-	display:none;
+	//width : 70px;
+	//height : 70px;
+	bottom: 30px;
+	margin-left: 75%;
+	position: fixed;
+	cursor: pointer;
 }
 .scrollToTop:hover{
 	text-decoration:none;
+}
+
+
+.top_btn {
+   background:url("Image/top_btn.png") center no-repeat;
 }
