@@ -19,6 +19,7 @@
 <body>
     <!-- Page Content -->
     <div class="container" style = "margin-top:10px; font-family:'Hanna',serif;">
+        <a href="#" class="scrollToTop btn-sm btn-default"><span class="glyphicon glyphicon-chevron-up"></span> </a>
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
@@ -33,7 +34,6 @@
             </div>
         </div>
         <div>
-          <a href="#" class="scrollToTop btn-sm btn-default"><span class="glyphicon glyphicon-chevron-up"></span> </a>
           <% @rest.each do |p| %>
             <% if p.itstype == @po_id.to_i %>
               <div class="row">
