@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'home#index'
 
   get 'home/index'
   get '/home/newval'
   get '/home/editdata'
-
+  get 'admin_page' => "home#admin_page"
   get '/destroy/:id' =>"home#destroy"
   get 'update_view/:post_id' =>'home#update_view'
   post 'real_update/:post_id' =>'home#real_update'
-  
+
   get '/write/:post_id' =>'home#write'
 
   get '/typewrite/:post_id' => 'home#typewrite'

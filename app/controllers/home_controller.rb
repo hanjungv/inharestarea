@@ -24,7 +24,9 @@ class HomeController < ApplicationController
 
 
   def addval
-
+    if current_user.id != 1
+      redirect_to "/"
+    end
     total = Totalrest.new
     total.name = params[:servname]
     total.building=params[:servbuilding]
@@ -40,11 +42,14 @@ class HomeController < ApplicationController
 
     total.save
 
-    redirect_to "/home/index"
+    redirect_to "/"
   end
 
 
   def editdata
+    if current_user.id != 1
+      redirect_to "/"
+    end
     @rest = Totalrest.all
   end
 
@@ -55,6 +60,9 @@ class HomeController < ApplicationController
   end
 
   def real_update
+    if current_user.id != 1
+      redirect_to "/"
+    end
     total = Totalrest.find(params[:post_id])
     total.name = params[:servname]
     total.building=params[:servbuilding]
@@ -76,11 +84,17 @@ class HomeController < ApplicationController
 
   def update_view
     @one_post = Totalrest.find(params[:post_id])
-
-
   end
 
-
+  def admin_page
+    unless user_signed_in?
+      redirect_to "/users/sign_in"
+    else
+      if current_user.id != 1
+        redirect_to "/"
+      end
+    end
+  end
 
   #footer
   def emailsend
