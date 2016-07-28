@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+#login
 gem "pundit"
 gem 'devise'
+gem "recaptcha", require: "recaptcha/rails"
+#s3
 gem "fog-aws"
 gem 'carrierwave'
 #email system
